@@ -94,9 +94,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg" data-setbg='<c:url value="/assets/img/product/${item.product_img }"/>'>
 										<ul class="product__item__pic__hover">
-											<li><a href="#"><i class="fa fa-heart"></i></a></li>
-											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+											<li><a href='<c:url value="./add-cart/${item.product_id}"/>'><i class="fa fa-shopping-cart"></i></a></li>
 										</ul>
 									</div>
 									<div class="product__item__text">

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8" %>
+<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 <div class="header__top">
 	<div class="container">
 		<div class="row">
@@ -61,11 +62,16 @@
 			<div class="col-lg-3">
 				<div class="header__cart">
 					<ul>
-						<li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-						<li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+						<!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
+						<li><a href='<c:url value="/gio-hang"/>'><i class="fa fa-shopping-bag"></i>
+						
+						<span>${TotalQuantityCart }</span>
+						<c:if test="${TotalQuantityCart == null }"> <span>0</span></c:if>
+						
+						 </a></li>
 					</ul>
 					<div class="header__cart__price">
-						item: <span>$150.00</span>
+						Total: <span>$${TotalPriceCart }</span><c:if test="${TotalPriceCart == null }"> <span>0</span></c:if>
 					</div>
 				</div>
 			</div>

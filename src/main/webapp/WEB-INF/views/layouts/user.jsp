@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"	prefix="decorator" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
+
 <!DOCTYPE html>
 <html>
 
@@ -24,7 +25,7 @@
     <link rel="stylesheet" href='<c:url value="/assets/css/owl.carousel.min.css"/>' type="text/css">
     <link rel="stylesheet" href='<c:url value="/assets/css/owl.theme.default.min.css"/>' type="text/css">
     <link rel="stylesheet" href='<c:url value="/assets/css/slicknav.min.css"/>' type="text/css">
-    <link rel="stylesheet" href='<c:url value="/assets/css/style.css"/>' type="text/css">
+ 		<link rel="stylesheet" href='<c:url value="/assets/css/new-style.css"/>' type="text/css">
 </head>
 
 <body>
@@ -39,12 +40,13 @@
 
 
 </body>
-    <script src='<c:url value="/assets/js/jquery-3.3.1.min.js"/>'></script>
-    <script src='<c:url value="/assets/js/bootstrap.min.js"/>'></script>
-    <script src='<c:url value="/assets/js/jquery.nice-select.min.js"/>'></script>
-    <script src='<c:url value="/assets/js/jquery-ui.min.js"/>'></script>
-    <script src='<c:url value="/assets/js/jquery.slicknav.js"/>'></script>
-    <script src='<c:url value="/assets/js/mixitup.min.js"/>'></script>
-    <script src='<c:url value="/assets/js/owl.carousel.min.js"/>'></script>
-    <script src='<c:url value="/assets/js/main.js"/>'></script>
+	<script src='<c:url value="/assets/js/jquery-3.3.1.min.js"/>'></script>
+	<script src='<c:url value="/assets/js/bootstrap.min.js"/>'></script>
+	<script src='<c:url value="/assets/js/jquery.nice-select.min.js"/>'></script>
+	<script src='<c:url value="/assets/js/jquery-ui.min.js"/>'></script>
+	<script src='<c:url value="/assets/js/jquery.slicknav.js"/>'></script>
+	<script src='<c:url value="/assets/js/mixitup.min.js"/>'></script>
+	<script src='<c:url value="/assets/js/owl.carousel.min.js"/>'></script>
+	<script src='<c:url value="/assets/js/new-main.js"/>'></script>
+	<decorator:getProperty property="page.script"></decorator:getProperty>
 </html>

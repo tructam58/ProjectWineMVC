@@ -104,6 +104,10 @@ ol {
   margin : 0;
 }
 
+.edit-cart:hover {
+	cursor: pointer;
+}
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -1859,8 +1863,8 @@ header {
 }
 
 .shoping__cart__table table tbody tr td {
-  padding-top   : 30px;
-  padding-bottom: 30px;
+  padding-top   : 15px;
+  padding-bottom: 15px;
   border-bottom : 1px solid #ebebeb;
 }
 
@@ -2826,7 +2830,7 @@ header {
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 1270px;
   }
 }
 
