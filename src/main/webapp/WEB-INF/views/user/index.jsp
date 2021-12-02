@@ -49,7 +49,7 @@
 	<div class="banner">
 		<div class="container">
 			<div class="section-title">
-				<h2>Danh mục sản phẩm</h2>
+				<h2>Categories</h2>
 			</div>
 
 			<div class="row">

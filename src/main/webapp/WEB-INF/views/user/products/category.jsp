@@ -18,7 +18,7 @@
 	<div class="banner">
 		<div class="container">
 			<div class="section-title">
-				<h2>Danh mục sản phẩm</h2>
+				<h2>Categories</h2>
 			</div>
 
 			<div class="row">
@@ -76,12 +76,12 @@
 				<div class="col-lg-9">
 
 					<div class="section-title ">
-						<h2>Tất cả sản phẩm</h2>
+						<h2>All Products</h2>
 					</div>
 					<div class="filter__sort" style="margin-left: auto;">
 						<span>Sort By</span> <select>
 							<option value="0">A-Z</option>
-							<option value="0">Thấp - Cao</option>
+							<option value="0">Low - High</option>
 						</select>
 					</div>
 

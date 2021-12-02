@@ -78,3 +78,40 @@ left join categories as cat on p.category_id = cat.category_id
 join countries as cn on p.country_id = cn.country_id
 group by p.category_id,  cn.country_id;
 
+
+create table users(
+	user_id bigint Auto_increment,
+	user_fullname varchar(150),
+    user_address varchar (255),
+    user_phone varchar(10),
+    user_email varchar(100),
+    user_password varchar(255),
+    PRIMARY KEY (user_id) 
+);
+
+-- Soobin
+
+create table bills(
+	bill_id bigint Auto_increment,
+	bill_fullname varchar(150),
+    bill_address varchar (255),
+    bill_email varchar(100),
+    bill_phone varchar(10),
+    bill_notes varchar(255),
+    bill_total double,
+    bill_quanty int,
+    PRIMARY KEY (bill_id) 
+);
+
+create table billdetail(
+	id bigint Auto_increment,
+	product_id char(50),
+    bill_id bigint,
+    bill_quanty int,
+    bill_total double,
+    
+    PRIMARY KEY (id) ,
+    foreign key (product_id) references products(product_id),
+	foreign key (bill_id) references bills(bill_id)
+);
+

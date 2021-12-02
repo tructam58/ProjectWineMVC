@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8" %>
+	pageEncoding="utf-8"%>
 <%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 <div class="header__top">
 	<div class="container">
@@ -15,19 +15,33 @@
 			<div class="col-lg-6 col-md-6">
 				<div class="header__top__right">
 					<div class="header__top__right__social">
-						<a href="#"><i class="fa fa-facebook"></i></a> 
-						<a href="#"><i class="fa fa-twitter"></i></a> 
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-pinterest-p"></i></a>
+						<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
+							class="fa fa-twitter"></i></a> <a href="#"><i
+							class="fa fa-linkedin"></i></a> <a href="#"><i
+							class="fa fa-pinterest-p"></i></a>
 					</div>
 					<div class="header__top__right__language">
 						<img src='<c:url value="/assets/img/language.png"/>' alt="">
 						<div>English</div>
+
+					</div>
+					
+					<c:if test="${not empty LoginInfo }">
+						<div class="header__top__right__auth header__top__right__language">
+							<a href="#"><i class="fa fa-user"></i> ${LoginInfo.user_fullname }</a>							
+						</div>
+						<div class="header__top__right__auth header__top__right__language">
+							<a href="<c:url value="/dang-xuat"/>"> Logout</a>							
+						</div>
 						
-					</div>
-					<div class="header__top__right__auth">
-						<a href="#"><i class="fa fa-user"></i> Login</a>
-					</div>
+					</c:if>
+
+					<c:if test="${empty LoginInfo }">
+						<div class="header__top__right__auth">
+							<a href="<c:url value="/dang-ky"/>"><i class="fa fa-user"></i> Login</a>
+						</div>
+					</c:if>
+
 				</div>
 			</div>
 		</div>
@@ -41,7 +55,8 @@
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="header__logo">
-					<a href="#"><img src='<c:url value="/assets/img/logo.png"/>' alt=""></a>
+					<a href="#"><img src='<c:url value="/assets/img/logo.png"/>'
+						alt=""></a>
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -51,11 +66,11 @@
 						<li><a href="./san-pham">Shop</a></li>
 						<li><a href="#">Pages</a>
 							<ul class="header__menu__dropdown">
-								<li><a href="./shop-details.html">Shop Details</a></li>
-								<li><a href="./shoping-cart.html">Shoping Cart</a></li>
-								<li><a href="./checkout.html">Check Out</a></li>
+								<li><a href="./san-pham">Shop Categories</a></li>
+								<li><a href="./gio-hang">Shopping Cart</a></li>
+								<li><a href="./dang-ky">Register</a></li>
 							</ul></li>
-						<li><a href="./contact.html">Contact</a></li>
+						<li><a href="./contact.html">About</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -63,15 +78,17 @@
 				<div class="header__cart">
 					<ul>
 						<!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
-						<li><a href='<c:url value="/gio-hang"/>'><i class="fa fa-shopping-bag"></i>
-						
-						<span>${TotalQuantityCart }</span>
-						<c:if test="${TotalQuantityCart == null }"> <span>0</span></c:if>
-						
-						 </a></li>
+						<li><a href='<c:url value="/gio-hang"/>'><i
+								class="fa fa-shopping-bag"></i> <span>${TotalQuantityCart }</span>
+								<c:if test="${TotalQuantityCart == null }">
+									<span>0</span>
+								</c:if> </a></li>
 					</ul>
 					<div class="header__cart__price">
-						Total: <span>$${TotalPriceCart }</span><c:if test="${TotalPriceCart == null }"> <span>0</span></c:if>
+						Total: <span>$${TotalPriceCart }</span>
+						<c:if test="${TotalPriceCart == null }">
+							<span>0</span>
+						</c:if>
 					</div>
 				</div>
 			</div>
@@ -80,11 +97,11 @@
 </header>
 
 
-		<!-- Hero Section Begin -->
+<!-- Hero Section Begin -->
 <section class="hero">
 	<div class="container">
 		<div class="row">
-		
+
 			<div class="col-lg-12">
 				<div class="hero__search">
 					<div class="hero__search__form">
@@ -106,8 +123,8 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
-	</section>
+</section>
